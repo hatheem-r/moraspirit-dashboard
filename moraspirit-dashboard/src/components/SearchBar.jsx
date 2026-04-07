@@ -1,19 +1,28 @@
 export default function SearchBar({ searchQuery, setSearchQuery }) {
     return (
-      <div style={{ marginBottom: '20px' }}>
+      <div className="search-bar-wrapper">
+        <svg
+          className="search-bar-icon"
+          width="15"
+          height="15"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
         <input
           type="text"
-          placeholder="Search members by name or role..."
+          placeholder="Search by name or role..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          style={{
-            padding: '10px',
-            width: '100%',
-            maxWidth: '400px',
-            borderRadius: '5px',
-            border: '1px solid #ccc',
-          }}
+          className="search-bar-input"
         />
       </div>
     );
   }
+  
